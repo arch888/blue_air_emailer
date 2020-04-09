@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mailer</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}">
+	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'jQuery/jQuery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'fontawesome/js/all.js' %}"></script>
+</head>
+<body>
+	{% if desc.template %}
+		<img src="{{desc.template.url}}">
+	{% else %}
+		<img src="{% static 'img/default.jpg' %}" style="width: 100%; height: 100%;">
+	{% endif %}
+	<div class="container-fluid">
+		<div class="row" style="width: 90%; height: 12vh; background: #021f59; margin-left: auto; margin-right: auto;">
+			<div class="col-4 my-4" style="color: white; font-size: 20px; border-right: 2px solid white;">
+				To get consulatation from air experts
+			</div>
+			<div class="col-2 my-4" style="color: white; font-size: 20px;border-right: 2px solid white;">
+				<i class="fas fa-phone-alt fa-lg" style="color: white; margin-top: 3px; margin-right: 10px;"></i>
+				{{desc.number}}
+			</div>
+			<div class="col-3 my-4" style="color: white; font-size: 20px;border-right: 2px solid white;">
+				<i class="fas fa-envelope fa-lg" style="color: white; margin-top: 3px; margin-right: 10px;"></i>
+				{{desc.email}}
+			</div>
+			<div class="col-3 my-4" style="color: white; font-size: 20px;">
+				<i class="fas fa-globe fa-lg" style="color: white; margin-top: 3px; margin-right: 10px;"></i>
+				www.blueair.com/in
+			</div>
+		</div>
+	</div>
+</body>
+</html>

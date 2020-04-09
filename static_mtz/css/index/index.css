@@ -1,0 +1,32 @@
+.form{
+	background: #021f59; 
+	width: 35vw; 
+	height: 60vh; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+
+.form-head{
+	color: white;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn{
+	margin-left: auto;
+	background: #021f59;
+	border: 1px solid white;
+	color: white;
+	border-radius: 25vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	margin-right: auto;
+	transition: all .3s ease-out; 
+}
+
+.btn:hover{
+	color: white;
+	
+}

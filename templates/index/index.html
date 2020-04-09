@@ -1,0 +1,38 @@
+{% include 'base.html' %}
+{% load static %}
+
+
+{% block customcss %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index/index.css' %}">
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row my-5">
+			<div class="row form" style="">
+				<div class="row py-2 form-head">
+					Emailer Form
+				</div>
+				<div class="container-fluid">
+					<div class="row px-5">
+						<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+							<div class="row">
+								<input type="text" name="name" placeholder="Name of Emailer" style="width: 30vw;" class="my-3" required>
+								<input type="number" name="phone" placeholder="Contact Number of Emailer" style="width: 30vw;" class="my-3" required>
+
+								<input type="text" name="email" placeholder="Email of Emailer" style="width: 30vw;" class="my-3" required>
+
+								<input type="file" name="template" style="color: white;" class="my-3">
+
+							</div>
+							<div class="row">
+								
+								<button type="submit" class="btn">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
